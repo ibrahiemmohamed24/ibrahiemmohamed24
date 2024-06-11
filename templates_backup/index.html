@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Product Details</h1>
+    <div>
+        <h2>Summer Suite</h2>
+        <p>Product Name: Summer Suite</p>
+        <p>Product Description: A stylish and comfortable summer suit perfect for any occasion.</p>
+        <p>Available Colors:</p>
+        <ul>
+            <li>Green Edition</li>
+            <li>Brown Edition</li>
+        </ul>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='summer_suite_green.jpg') }}" alt="Summer Suite Green" width="30%">
+        <img src="{{ url_for('static', filename='summer_suite_brown.jpg') }}" alt="Summer Suite Brown" width="30%">
+    </div>
+    <div>
+        <h2>Contact Us</h2>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
